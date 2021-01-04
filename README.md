@@ -1,2 +1,2 @@
-# ImageChat_visualization
-A web page to show a chat with images
+# ImageChat_evaluation
+A web page to evaluate a image-text mixed dialogue
