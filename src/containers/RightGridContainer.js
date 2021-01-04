@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addIdx, subIdx, changePrev, changeNext, changeDatasetA, changeDatasetB, changeDatasetC, setModeT, setModeF, setModeP } from '../store/modules/ChatData';
+import { addIdx, subIdx, changePrev, changeNext, changeDataset, setMode, setQ1, setQ2 } from '../store/modules/ChatData';
 import RightGrid from '../components/RightGrid/RightGrid';
 
 export default function RightGridContainer() {
@@ -13,6 +13,8 @@ export default function RightGridContainer() {
     const stateOptions = useSelector(state => state.chatdata.stateOptions);
     const modeOptions = useSelector(state => state.chatdata.modeOptions);
     const top1_mode = useSelector(state => state.chatdata.top1_mode);
+    const q1_rating = useSelector(state => state.chatdata.q1_rating);
+    const q2_rating = useSelector(state => state.chatdata.q2_rating);
 
     const conv_addIdx = () => {
         dispatch(addIdx());
@@ -30,28 +32,20 @@ export default function RightGridContainer() {
         dispatch(changeNext());
     }
 
-    const conv_changeDatasetA = () => {
-        dispatch(changeDatasetA());
+    const conv_changeDataset = (data_num) => {
+        dispatch(changeDataset(data_num));
     }
 
-    const conv_changeDatasetB = () => {
-        dispatch(changeDatasetB());
+    const conv_setMode = (mode) => {
+        dispatch(setMode(mode));
     }
 
-    const conv_changeDatasetC = () => {
-        dispatch(changeDatasetC());
+    const conv_setQ1 = (object) => {
+        dispatch(setQ1(object));
     }
 
-    const conv_setModeT = () => {
-        dispatch(setModeT());
-    }
-
-    const conv_setModeF = () => {
-        dispatch(setModeF());
-    }
-
-    const conv_setModeP = () => {
-        dispatch(setModeP());
+    const conv_setQ2 = (object) => {
+        dispatch(setQ2(object));
     }
 
     return (
@@ -63,16 +57,16 @@ export default function RightGridContainer() {
             chatData_length={chatData_length}
             modeOptions={modeOptions}
             top1_mode={top1_mode}
+            q1_rating={q1_rating}
+            q2_rating={q2_rating}
             conv_addIdx={conv_addIdx}
             conv_subIdx={conv_subIdx}
             conv_changePrev={conv_changePrev}
             conv_changeNext={conv_changeNext}
-            conv_changeDatasetA={conv_changeDatasetA}
-            conv_changeDatasetB={conv_changeDatasetB}
-            conv_changeDatasetC={conv_changeDatasetC}
-            conv_setModeT={conv_setModeT}
-            conv_setModeF={conv_setModeF}
-            conv_setModeP={conv_setModeP}
+            conv_changeDataset={conv_changeDataset}
+            conv_setMode={conv_setMode}
+            conv_setQ1={conv_setQ1}
+            conv_setQ2={conv_setQ2}
         />
     );
 }

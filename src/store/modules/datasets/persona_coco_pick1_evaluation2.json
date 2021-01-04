@@ -1,0 +1,168 @@
+[
+    {
+        "max_score": "0.0",
+        "target_img": "COCO_train2014_000000353017.jpg",
+        "max_idx": 3,
+        "text": [
+            "haha burgers are everywhere nowadays , i think that is americas standard",
+            "yea i guess there is no avoiding it lol where you going ?",
+            "i am thinking cruise , hopefully they clean the rooms well , perfection is key",
+            "yea its gotta be perfect . its your vacation ! i have never been on a cruise",
+            "me either , but i worked loonngg hours for it ! so its deserved !"
+        ],
+        "key": 0
+    },
+    {
+        "max_score": "0.0",
+        "target_img": "COCO_val2014_000000052087.jpg",
+        "max_idx": 1,
+        "text": [
+            "hey do you ever wonder how you will find parking at a new place ? i do .",
+            "if i drove i would probably wonder that .",
+            "hey do you ever wonder how you will find parking at a new place ? i do ."
+        ],
+        "key": 1
+    },
+    {
+        "max_score": "0.31122120099671824",
+        "target_img": "COCO_val2014_000000293607.jpg",
+        "max_idx": 1,
+        "text": [
+            "names jaz my goal is to be a male model and be in hollywood .",
+            "that is awesome i would love to be a cook . i am great at cooking .",
+            "i became a huge fan after listening to classical jazz"
+        ],
+        "key": 2
+    },
+    {
+        "max_score": "0.3115209914376559",
+        "target_img": "COCO_train2014_000000287927.jpg",
+        "max_idx": 3,
+        "text": [
+            "hello . got any burritos . my favorite food is burritos",
+            "hi there . i do not like burritos .",
+            "do you like to hike ? i love to hike and be outside !",
+            "yes i do . i like riding motorcycles and horses . do you ?",
+            "no . i am close to my mom the hiker but not my dad who rides motorcycles ."
+        ],
+        "key": 3
+    },
+    {
+        "max_score": "0.3635682655832537",
+        "target_img": "COCO_val2014_000000064446.jpg",
+        "max_idx": 2,
+        "text": [
+            "hi ! i am aiden ! who are you ?",
+            "i am mike , nice to meet you .",
+            "hi mike ! do you like soccer ? i love soccer !",
+            "it is decent . i like basketball a lot !"
+        ],
+        "key": 4
+    },
+    {
+        "max_score": "0.3508755255198784",
+        "target_img": "COCO_val2014_000000260635.jpg",
+        "max_idx": 0,
+        "text": [
+            "will you cook me some burgers with cheese ?",
+            "i do not cook , sorry ."
+        ],
+        "key": 5
+    },
+    {
+        "max_score": "0.4034178541961855",
+        "target_img": "COCO_val2014_000000449661.jpg",
+        "max_idx": 3,
+        "text": [
+            "hello , frank . i am art . tell me something interesting about yourself .",
+            "i love to read and cycle , and my goal is to be in a professional competition",
+            "very exciting . i like to watch tv and sit on the couch . pretty boring .",
+            "lol well i manage a grocery store , talk about boring",
+            "does your store sell mac and cheese ? because that is the food i love most ."
+        ],
+        "key": 6
+    },
+    {
+        "max_score": "0.40970481811996895",
+        "target_img": "COCO_val2014_000000102532.jpg",
+        "max_idx": 1,
+        "text": [
+            "hello , how are you doing today ?",
+            "hi i am great ! just finished up my latest work project ! you ?",
+            "i am doing very well thank you . i cannot wait to go out ."
+        ],
+        "key": 7
+    },
+    {
+        "max_score": "0.48940499162878526",
+        "target_img": "COCO_train2014_000000262623.jpg",
+        "max_idx": 3,
+        "text": [
+            "it is beautiful outside . fairies live outside in flowers .",
+            "right ! and all the amazing animals outside ."
+        ],
+        "key": 8
+    },
+    {
+        "max_score": "0.45740532674370826",
+        "target_img": "COCO_train2014_000000529629.jpg",
+        "max_idx": 1,
+        "text": [
+            "hello , what are your hobbies i like to ride horses",
+            "hello i like to refurbish classic cars",
+            "nice , my parents adopted me at 2 years of age"
+        ],
+        "key": 9
+    },
+    {
+        "max_score": "0.5187021571600304",
+        "target_img": "COCO_train2014_000000210728.jpg",
+        "max_idx": 3,
+        "text": [
+            "oh , i am sorry . both my parents are dead .",
+            "mine are so mean . they do not care",
+            "what do you do for a living ?",
+            "i raise my 3 kids and sing",
+            "i love listening to music ."
+        ],
+        "key": 10
+    },
+    {
+        "max_score": "0.5079841191460885",
+        "target_img": "COCO_train2014_000000388171.jpg",
+        "max_idx": 2,
+        "text": [
+            "hi ! i am aiden ! who are you ?",
+            "i am mike , nice to meet you .",
+            "hi mike ! do you like soccer ? i love soccer !",
+            "it is decent . i like basketball a lot !"
+        ],
+        "key": 11
+    },
+    {
+        "max_score": "0.5558888395406991",
+        "target_img": "COCO_val2014_000000334648.jpg",
+        "max_idx": 3,
+        "text": [
+            "hi how are you",
+            "hello ! i am well . working on my halloween costume .",
+            "i want to be mater for halloween and you ?",
+            "i like dressing up as anything because it is my favorite holiday .",
+            "i hope they give out ice cream as a treat"
+        ],
+        "key": 12
+    },
+    {
+        "max_score": "0.5692055738557737",
+        "target_img": "COCO_train2014_000000108217.jpg",
+        "max_idx": 3,
+        "text": [
+            "oh , i am sorry . both my parents are dead .",
+            "mine are so mean . they do not care",
+            "what do you do for a living ?",
+            "i raise my 3 kids and sing",
+            "i love listening to music ."
+        ],
+        "key": 13
+    }
+]

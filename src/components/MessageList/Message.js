@@ -4,7 +4,9 @@ import './Message.css';
 
 export default class Message extends Component {
     render() {
-        const { type, text, img_list, score_list, top1_mode, top1_target } = this.props;
+        const { type, text, target_img, top1_mode, top1_target, max_score } = this.props;
+
+        console.log(target_img)
 
             return (
             <div>
@@ -13,22 +15,19 @@ export default class Message extends Component {
                         if (type === true)
                             return  (
                                     <div>
-                                        { (top1_mode === 2 && top1_target)
+                                        { (top1_mode === 1 && top1_target)
                                             ?   null
                                             :   <div className="messageSection messageSectionBot">
-                                                    <span className="messageSectionBody">{text}</span>
+                                                    <span className={top1_target ? "messageSectionTarget" : "messageSectionBody"}>{text}</span>
                                                 </div>
                                         }
-                                        {img_list
+                                        {target_img
                                             ?   <div className="messageSection_Img messageSectionBot">
-                                                    { img_list.map(
-                                                        (img, i) => (
-                                                            <span key={i} className="messageSectionImg">
-                                                                <Image style={{width: '10vh', height: 'auto'}} src={require(`../../store/modules/coco_ex/${img}`)}/>
-                                                                <div style={{marginTop:'1.1vh', textAlign: 'center'}}>{Number(score_list[i]).toFixed(3)}</div>
-                                                            </span>
-                                                        )
-                                                    )}
+                                                    <span className="messageSectionImg">
+                                                        <Image style={{width: '300px', height: 'auto'}} src={require(`../../store/modules/coco_ex/${target_img}`)}/>
+                                                        {/* 이후 삭제해야 */}
+                                                        <span>{max_score}</span>
+                                                    </span>
                                                 </div>
                                             :   null
                                         }
@@ -37,24 +36,21 @@ export default class Message extends Component {
                         if (type === false)
                             return (
                                 <div>
-                                    { (top1_mode === 2 && top1_target)
+                                    { (top1_mode === 1 && top1_target)
                                             ?   null
                                             :   <div className="messageSection messageSectionUser">
                                                     <div className="messageSectionCenter">
-                                                        <span className="messageSectionBody">{text}</span>
+                                                        <span className={top1_target ? "messageSectionTarget" : "messageSectionBody"}>{text}</span>
                                                     </div>
                                                 </div>
                                     }
-                                    {img_list
+                                    {target_img
                                         ?   <div className="messageSection_Img messageSectionUser">
-                                                { img_list.map(
-                                                    (img, i) => (
-                                                        <span key={i} className="messageSectionImg">
-                                                            <Image style={{width: '10vh', height: 'auto'}} src={require(`../../store/modules/coco_ex/${img}`)}/>
-                                                            <div style={{marginTop:'1.1vh', textAlign: 'center'}}>{Number(score_list[i]).toFixed(3)}</div>
-                                                        </span>
-                                                    )
-                                                )}
+                                                <span className="messageSectionImg">
+                                                    <Image style={{width: '15vw', height: 'auto'}} src={require(`../../store/modules/coco_ex/${target_img}`)}/>
+                                                    {/* 이후 삭제해야 */}
+                                                    <span>{max_score}</span>
+                                                </span>
                                             </div>
                                         :   null
                                     }

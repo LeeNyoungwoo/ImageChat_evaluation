@@ -5,8 +5,10 @@ export default class MessageList extends Component {
 
     render() {
         const { chatData, data_idx, top1_mode } = this.props;
-        const max_idx = chatData[data_idx]['max_idx'];
-        
+        const max_idx = parseInt(chatData[data_idx]['max_idx']);
+        const max_score = chatData[data_idx]['max_score'];
+        const target_img = chatData[data_idx]['target_img'];
+
         // render whole messages during conversation
         const messages = chatData[data_idx]['text'].map(
             (content, i) => (
@@ -16,25 +18,25 @@ export default class MessageList extends Component {
                                 id={i}
                                 type={true}
                                 text={content}
-                                img_list = { ((top1_mode === 0 || top1_mode === 2) && max_idx !== i)
+                                target_img = { max_idx !== i
                                     ?   null
-                                    :   chatData[data_idx]['img'][i]
+                                    :   target_img
                                 }
-                                score_list = {chatData[data_idx]['score'][i]}
                                 top1_mode = {top1_mode}
                                 top1_target = {max_idx === i}
+                                max_score={max_score}
                             />
                         :   <Message
                                 id={i}
                                 type={false}
                                 text={content}
-                                img_list = { ((top1_mode === 0 || top1_mode === 2) && max_idx !== i)
+                                target_img = { max_idx !== i
                                     ?   null
-                                    :   chatData[data_idx]['img'][i]
+                                    :   target_img
                                 }
-                                score_list = {chatData[data_idx]['score'][i]}
                                 top1_mode = {top1_mode}
                                 top1_target = {max_idx === i}
+                                max_score={max_score}
                             />
                     }
                 </div>
