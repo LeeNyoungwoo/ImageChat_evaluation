@@ -10,10 +10,21 @@ export default class RightGrid extends Component{
             conv_changeDataset, conv_setMode, modeOptions,
             conv_setQ1, conv_setQ2, q1_rating, q2_rating
         } = this.props;
+
+        const downloadTxtFile = () => {
+            const element = document.createElement("a");
+            const file = new Blob(q1_rating, {type: 'text/plain'});
+            element.href = URL.createObjectURL(file);
+            element.download = "result.txt";
+            document.body.appendChild(element); // Required for this to work in FireFox
+            element.click();
+        }
         
         const setNextStatus = () => {
             console.log(q1_rating)
             console.log(q2_rating)
+            downloadTxtFile()
+
             if (!prev_status){
                 conv_changePrev()
             }

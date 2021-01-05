@@ -12,8 +12,8 @@
 /build
 
 # image and data
-/src/store/modules/coco_ex
-/src/store/modules/dataset
+/src/store/modules/targetImages
+/src/store/modules/datasets
 
 # misc
 .DS_Store

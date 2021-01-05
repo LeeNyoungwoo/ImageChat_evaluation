@@ -1,9 +1,12 @@
 import { createAction, handleActions } from 'redux-actions'
-import eval1 from "./datasets/persona_coco_pick1_evaluation1.json";
-import eval2 from "./datasets/persona_coco_pick1_evaluation2.json";
-import eval3 from "./datasets/persona_coco_pick1_evaluation3.json";
+import dialydialog_coco from "./datasets/dailydialog_coco_eval.json";
+import dialydialog_flickr from "./datasets/dailydialog_flickr_eval.json";
+import empathy_coco from "./datasets/empathy_coco_eval.json";
+import empathy_flickr from "./datasets/empathy_flickr_eval.json";
+import persona_coco from "./datasets/persona_coco_eval.json";
+import persona_flickr from "./datasets/persona_flickr_eval.json";
 
-const dataset_lists = [eval1, eval2, eval3]
+const dataset_lists = [dialydialog_coco, dialydialog_flickr, empathy_coco, empathy_flickr, persona_coco, persona_flickr]
 
 const ADD_IDX = 'chat/ADD_IDX' // 다음 대화로 이동
 const SUB_IDX = 'chat/SUB_IDX' // 이전 대화로 이동
@@ -32,18 +35,33 @@ const initialState = {
     stateOptions: [
         {
             key: 0,
-            text: 'eval_1',
+            text: 'dialydialog_coco',
             value: 0
         },
         {
             key: 1,
-            text: 'eval_2',
+            text: 'dialydialog_flickr',
             value: 1
         },
         {
             key: 2,
-            text: 'eval_3',
+            text: 'empathy_coco',
             value: 2
+        },
+        {
+            key: 3,
+            text: 'empathy_flickr',
+            value: 3
+        },
+        {
+            key: 4,
+            text: 'persona_coco',
+            value: 4
+        },
+        {
+            key: 5,
+            text: 'persona_flickr',
+            value: 5
         },
     ],
     top1_mode: 0,

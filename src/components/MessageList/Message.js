@@ -6,8 +6,6 @@ export default class Message extends Component {
     render() {
         const { type, text, target_img, top1_mode, top1_target, max_score } = this.props;
 
-        console.log(target_img)
-
             return (
             <div>
                 {
@@ -24,7 +22,7 @@ export default class Message extends Component {
                                         {target_img
                                             ?   <div className="messageSection_Img messageSectionBot">
                                                     <span className="messageSectionImg">
-                                                        <Image style={{width: '300px', height: 'auto'}} src={require(`../../store/modules/coco_ex/${target_img}`)}/>
+                                                        <Image style={{width: '300px', height: 'auto'}} src={require(`../../store/modules/targetImages/${target_img}`)}/>
                                                         {/* 이후 삭제해야 */}
                                                         <span>{max_score}</span>
                                                     </span>
@@ -47,7 +45,7 @@ export default class Message extends Component {
                                     {target_img
                                         ?   <div className="messageSection_Img messageSectionUser">
                                                 <span className="messageSectionImg">
-                                                    <Image style={{width: '15vw', height: 'auto'}} src={require(`../../store/modules/coco_ex/${target_img}`)}/>
+                                                    <Image style={{width: '15vw', height: 'auto'}} src={require(`../../store/modules/targetImages/${target_img}`)}/>
                                                     {/* 이후 삭제해야 */}
                                                     <span>{max_score}</span>
                                                 </span>
