@@ -24,7 +24,7 @@ export default class Message extends Component {
                                                     <span className="messageSectionImg">
                                                         <Image style={{width: '300px', height: 'auto'}} src={require(`../../store/modules/targetImages/${target_img}`)}/>
                                                         {/* 이후 삭제해야 */}
-                                                        <span>{max_score}</span>
+                                                        {/*<span>{max_score}</span>*/}
                                                     </span>
                                                 </div>
                                             :   null
@@ -47,7 +47,7 @@ export default class Message extends Component {
                                                 <span className="messageSectionImg">
                                                     <Image style={{width: '15vw', height: 'auto'}} src={require(`../../store/modules/targetImages/${target_img}`)}/>
                                                     {/* 이후 삭제해야 */}
-                                                    <span>{max_score}</span>
+                                                    {/*<span>{max_score}</span>*/}
                                                 </span>
                                             </div>
                                         :   null
