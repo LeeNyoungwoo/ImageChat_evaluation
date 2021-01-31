@@ -1,9 +1,9 @@
 import { createAction, handleActions } from 'redux-actions'
-import test_0 from "./datasets/test_0.json";
-import test_1 from "./datasets/test_1.json";
-import test_2 from "./datasets/test_2.json";
+import final_100 from "./datasets/final_100.json";
+// import test_1 from "./datasets/test_1.json";
+// import test_2 from "./datasets/test_2.json";
 
-const dataset_lists = [test_0, test_1, test_2]
+const dataset_lists = [final_100]
 
 const ADD_IDX = 'chat/ADD_IDX' // 다음 대화로 이동
 const SUB_IDX = 'chat/SUB_IDX' // 이전 대화로 이동
@@ -13,8 +13,8 @@ const CHANGE_DATASET = 'chat/CHANGE_DATASET'
 const CHANGE_MODE = 'chat/CHANGE_MODE' // 모드 변경, Top1_mode - 0, Overall_mode - 1, Picture_only mode - 2
 const SET_Q1 = 'chat/SET_Q1' // Questiong 1 rating 설정
 const SET_Q2 = 'chat/SET_Q2' // Questiong 2 rating 설정
-const SET_Q3 = 'chat/SET_Q3' // Questiong 3 rating 설정
-const SET_Q4 = 'chat/SET_Q4' // Questiong 4 rating 설정
+// const SET_Q3 = 'chat/SET_Q3' // Questiong 3 rating 설정
+// const SET_Q4 = 'chat/SET_Q4' // Questiong 4 rating 설정
 
 export const changePrev= createAction(PREV_STATUS)
 export const changeNext= createAction(NEXT_STATUS)
@@ -24,8 +24,8 @@ export const changeDataset = createAction(CHANGE_DATASET, data_num => ({ data_nu
 export const setMode = createAction(CHANGE_MODE, mode => ({ mode }))
 export const setQ1 = createAction(SET_Q1, object => ({ object }))
 export const setQ2 = createAction(SET_Q2, object => ({ object }))
-export const setQ3 = createAction(SET_Q3, object => ({ object }))
-export const setQ4 = createAction(SET_Q4, object => ({ object }))
+// export const setQ3 = createAction(SET_Q3, object => ({ object }))
+// export const setQ4 = createAction(SET_Q4, object => ({ object }))
 
 const initialState = {
     chatData: dataset_lists[0],
@@ -36,30 +36,20 @@ const initialState = {
     stateOptions: [
         {
             key: 0,
-            text: 'final_evaluation_0',
+            text: 'final_100',
             value: 0
-        },
-        {
-            key: 1,
-            text: 'final_evaluation_1',
-            value: 1
-        },
-        {
-            key: 2,
-            text: 'final_evaluation_2',
-            value: 2
         },
     ],
     top1_mode: 0,
     modeOptions: [
         {
             key: 0,
-            text: 'top1_mode',
+            text: 'current_turn',
             value: 0
         },
         {
             key: 2,
-            text: 'picture_only',
+            text: 'next_turn',
             value: 1
         }
     ],
@@ -92,8 +82,8 @@ const initialState = {
     ],
     q1_rating: Array.from({length: Object.keys(dataset_lists[0]).length}, () => -1),
     q2_rating: Array.from({length: Object.keys(dataset_lists[0]).length}, () => -1),
-    q3_rating: Array.from({length: Object.keys(dataset_lists[0]).length}, () => -1),
-    q4_rating: Array.from({length: Object.keys(dataset_lists[0]).length}, () => -1),
+    // q3_rating: Array.from({length: Object.keys(dataset_lists[0]).length}, () => -1),
+    // q4_rating: Array.from({length: Object.keys(dataset_lists[0]).length}, () => -1),
 }
 
 export default handleActions(
@@ -123,8 +113,8 @@ export default handleActions(
             next_status: true,
             q1_rating: Array.from({length: Object.keys(dataset_lists[action.payload.data_num]).length}, () => -1),
             q2_rating: Array.from({length: Object.keys(dataset_lists[action.payload.data_num]).length}, () => -1),
-            q3_rating: Array.from({length: Object.keys(dataset_lists[action.payload.data_num]).length}, () => -1),
-            q4_rating: Array.from({length: Object.keys(dataset_lists[action.payload.data_num]).length}, () => -1),
+            // q3_rating: Array.from({length: Object.keys(dataset_lists[action.payload.data_num]).length}, () => -1),
+            // q4_rating: Array.from({length: Object.keys(dataset_lists[action.payload.data_num]).length}, () => -1),
         }),
         [CHANGE_MODE]: (state, action) => ({
             ...state,
@@ -138,14 +128,14 @@ export default handleActions(
             ...state,
             q2_rating: state.q2_rating.map((el, idx) => (idx === action.payload.object.idx) ? action.payload.object.value : el)
         }),
-        [SET_Q3]: (state, action) => ({
-            ...state,
-            q3_rating: state.q3_rating.map((el, idx) => (idx === action.payload.object.idx) ? action.payload.object.value : el)
-        }),
-        [SET_Q4]: (state, action) => ({
-            ...state,
-            q4_rating: state.q4_rating.map((el, idx) => (idx === action.payload.object.idx) ? action.payload.object.value : el)
-        })
+        // [SET_Q3]: (state, action) => ({
+        //     ...state,
+        //     q3_rating: state.q3_rating.map((el, idx) => (idx === action.payload.object.idx) ? action.payload.object.value : el)
+        // }),
+        // [SET_Q4]: (state, action) => ({
+        //     ...state,
+        //     q4_rating: state.q4_rating.map((el, idx) => (idx === action.payload.object.idx) ? action.payload.object.value : el)
+        // })
     },
     initialState
 )

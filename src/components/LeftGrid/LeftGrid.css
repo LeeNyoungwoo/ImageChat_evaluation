@@ -32,3 +32,17 @@
 
     color: #FFFFFF;
 }
+
+.leftGridTag2{
+    position: absolute;
+    top: 40vh;
+    display: "flex";
+    width: 100%;
+    text-align: center;
+
+    font-family: 'Molengo', sans-serif;
+    font-size: 3vh;
+    line-height: 0px;
+
+    color: #FFFFFF;
+}

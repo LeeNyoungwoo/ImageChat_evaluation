@@ -11,7 +11,14 @@ div {
 }
 
 .messageSection_Img {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.messageSection_Img_t {
+    margin-bottom: 30px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -54,6 +61,7 @@ div {
 .messageSectionTarget {
     padding: 2vh 2vw;
     border-radius: 5px;
+    margin-bottom: 20px;
     font-size: 2vh;
     font-family: 'Roboto', sans-serif;
     line-height: 150%;
@@ -69,6 +77,31 @@ div {
 }
 
 .messageSectionUser .messageSectionTarget {
+    margin-right: 2vw;
+    margin-left: 1vw;
+}
+
+.messageSectionBody_last{
+    padding: 2vh 2vw;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 2vh;
+    font-family: 'Roboto', sans-serif;
+    line-height: 150%;
+    font-weight: 300;
+    border-style: dashed;
+    border-width: 0.1pc;
+    border-color: #424242;
+}
+
+.messageSectionBot .messageSectionBody_last {
+    background-color: #c5cae9;
+    margin-left: 2vw;
+    margin-right: 1vw;
+}
+
+.messageSectionUser .messageSectionBody_last {
+    background-color: #bdbdbd;
     margin-right: 2vw;
     margin-left: 1vw;
 }

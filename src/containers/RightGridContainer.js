@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addIdx, subIdx, changePrev, changeNext, changeDataset, setMode, setQ1, setQ2, setQ3, setQ4 } from '../store/modules/ChatData';
+import { addIdx, subIdx, changePrev, changeNext, changeDataset, setMode, setQ1, setQ2 } from '../store/modules/ChatData';
 import RightGrid from '../components/RightGrid/RightGrid';
 
 export default function RightGridContainer() {
@@ -16,8 +16,8 @@ export default function RightGridContainer() {
     const top1_mode = useSelector(state => state.chatdata.top1_mode);
     const q1_rating = useSelector(state => state.chatdata.q1_rating);
     const q2_rating = useSelector(state => state.chatdata.q2_rating);
-    const q3_rating = useSelector(state => state.chatdata.q3_rating);
-    const q4_rating = useSelector(state => state.chatdata.q4_rating);
+    // const q3_rating = useSelector(state => state.chatdata.q3_rating);
+    // const q4_rating = useSelector(state => state.chatdata.q4_rating);
 
     const conv_addIdx = () => {
         dispatch(addIdx());
@@ -51,13 +51,13 @@ export default function RightGridContainer() {
         dispatch(setQ2(object));
     }
 
-    const conv_setQ3 = (object) => {
-        dispatch(setQ3(object));
-    }
+    // const conv_setQ3 = (object) => {
+    //     dispatch(setQ3(object));
+    // }
     
-    const conv_setQ4 = (object) => {
-        dispatch(setQ4(object));
-    }
+    // const conv_setQ4 = (object) => {
+    //     dispatch(setQ4(object));
+    // }
 
     return (
         <RightGrid
@@ -72,8 +72,8 @@ export default function RightGridContainer() {
             top1_mode={top1_mode}
             q1_rating={q1_rating}
             q2_rating={q2_rating}
-            q3_rating={q3_rating}
-            q4_rating={q4_rating}
+            // q3_rating={q3_rating}
+            // q4_rating={q4_rating}
 
             conv_addIdx={conv_addIdx}
             conv_subIdx={conv_subIdx}
@@ -84,8 +84,8 @@ export default function RightGridContainer() {
 
             conv_setQ1={conv_setQ1}
             conv_setQ2={conv_setQ2}
-            conv_setQ3={conv_setQ3}
-            conv_setQ4={conv_setQ4}
+            // conv_setQ3={conv_setQ3}
+            // conv_setQ4={conv_setQ4}
         />
     );
 }

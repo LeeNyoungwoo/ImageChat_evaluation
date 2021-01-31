@@ -13,32 +13,37 @@ export default class MessageList extends Component {
         const messages = chatData[data_idx]['text'].map(
             (content, i) => (
                 <div key={i}>
-                    { (i % 2) === 0
-                        ?   <Message
-                                id={i}
-                                type={true}
-                                text={content}
-                                target_img = { max_idx !== i
-                                    ?   null
-                                    :   target_img
-                                }
-                                top1_mode = {top1_mode}
-                                top1_target = {max_idx === i}
-                                max_score={max_score}
-                            />
-                        :   <Message
-                                id={i}
-                                type={false}
-                                text={content}
-                                target_img = { max_idx !== i
-                                    ?   null
-                                    :   target_img
-                                }
-                                top1_mode = {top1_mode}
-                                top1_target = {max_idx === i}
-                                max_score={max_score}
-                            />
+                    { (i === chatData[data_idx]['text'].length - 1) && top1_mode === 0
+                        ?   null
+                        :   (i % 2) === 0
+                            ?   <Message
+                                    id={i}
+                                    type={true}
+                                    text={content}
+                                    target_img = { max_idx !== i
+                                        ?   null
+                                        :   target_img
+                                    }
+                                    top1_mode = {top1_mode}
+                                    top1_target = {max_idx === i}
+                                    max_score={max_score}
+                                    last_target = {i === chatData[data_idx]['text'].length - 1}
+                                />
+                            :   <Message
+                                    id={i}
+                                    type={false}
+                                    text={content}
+                                    target_img = { max_idx !== i
+                                        ?   null
+                                        :   target_img
+                                    }
+                                    top1_mode = {top1_mode}
+                                    top1_target = {max_idx === i}
+                                    max_score={max_score}
+                                    last_target = {i === chatData[data_idx]['text'].length - 1}
+                                />
                     }
+                    
                 </div>
             )
         );
