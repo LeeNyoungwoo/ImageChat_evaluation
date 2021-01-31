@@ -1,11 +1,9 @@
 import { createAction, handleActions } from 'redux-actions'
-import persona_0_result from "./datasets/persona_0_result.json";
-import persona_1_result from "./datasets/persona_1_result.json";
-import persona_2_result from "./datasets/persona_2_result.json";
-import persona_3_result from "./datasets/persona_3_result.json";
-import persona_4_result from "./datasets/persona_4_result.json";
+import test_0 from "./datasets/test_0.json";
+import test_1 from "./datasets/test_1.json";
+import test_2 from "./datasets/test_2.json";
 
-const dataset_lists = [persona_0_result, persona_1_result, persona_2_result, persona_3_result, persona_4_result]
+const dataset_lists = [test_0, test_1, test_2]
 
 const ADD_IDX = 'chat/ADD_IDX' // 다음 대화로 이동
 const SUB_IDX = 'chat/SUB_IDX' // 이전 대화로 이동
@@ -38,28 +36,18 @@ const initialState = {
     stateOptions: [
         {
             key: 0,
-            text: 'persona_0_result',
+            text: 'final_evaluation_0',
             value: 0
         },
         {
             key: 1,
-            text: 'persona_1_result',
+            text: 'final_evaluation_1',
             value: 1
         },
         {
             key: 2,
-            text: 'persona_2_result',
+            text: 'final_evaluation_2',
             value: 2
-        },
-        {
-            key: 3,
-            text: 'persona_3_result',
-            value: 3
-        },
-        {
-            key: 4,
-            text: 'persona_4_result',
-            value: 4
         },
     ],
     top1_mode: 0,
@@ -93,8 +81,13 @@ const initialState = {
         },
         {
             key: 3,
-            text: '기타',
+            text: '이전 발화에 대한 리액션',
             value: 3
+        },
+        {
+            key: 4,
+            text: '기타',
+            value: 4
         }
     ],
     q1_rating: Array.from({length: Object.keys(dataset_lists[0]).length}, () => -1),

@@ -24,7 +24,7 @@ div {
 .messageSectionBody {
     padding: 2vh 2vw;
     border-radius: 5px;
-    font-size: 1.5vh;
+    font-size: 2vh;
     font-family: 'Roboto', sans-serif;
     line-height: 150%;
     margin-bottom: 3vh;
@@ -54,7 +54,7 @@ div {
 .messageSectionTarget {
     padding: 2vh 2vw;
     border-radius: 5px;
-    font-size: 1.5vh;
+    font-size: 2vh;
     font-family: 'Roboto', sans-serif;
     line-height: 150%;
     font-weight: 300;
